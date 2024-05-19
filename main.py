@@ -1,24 +1,17 @@
-import os.path
 import numpy as np
-from fastapi import FastAPI
-import uvicorn
-import fastapi.responses
-import io
-from fastapi import Form,File,UploadFile
-from typing import List
-from fastapi.responses import HTMLResponse
-from fastapi import FastAPI, Request
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
 import hashlib
-from PIL import Image, ImageDraw, ImageEnhance
+import io
+from typing import List
+
 import matplotlib.pyplot as plt
-from fastapi import FastAPI, Request, Form, HTTPException
-from fastapi.templating import Jinja2Templates
+import numpy as np
 import uvicorn
 from PIL import Image
+from fastapi import FastAPI, Request, Form
+from fastapi import File, UploadFile
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
-import requests
+from fastapi.templating import Jinja2Templates
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
