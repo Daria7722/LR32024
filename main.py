@@ -90,38 +90,3 @@ async def make_image(request: Request):
 
 if __name__=="__main__":
     uvicorn.run(app,host="127.0.0.1", port=8000)
-
-'''
-def swap_halves(image_path):
-    image = Image.open(image_path)# Открываем изображение
-    width, height = image.size # размеры изображения
-    # координаты для разделения изображения на две половины
-    mid_x = width // 2
-    mid_y = height // 2
-
-    if n==1:
-        # Разделяем изображение на две половины
-        left_half = image.crop((0, 0, mid_x, height))
-        right_half = image.crop((mid_x, 0, width, height))
-
-        # Меняем местами левую и правую половины
-        swapped_image = Image.new('RGB', (width, height))
-        swapped_image.paste(right_half, (0, 0))
-        swapped_image.paste(left_half, (mid_x, 0))
-    else:
-        # Разделяем изображение на две половины
-        top_half = image.crop((0, 0, width, mid_y))
-        bottom_half = image.crop((0, mid_y, width, height))
-
-        # Меняем местами верхнюю и нижнюю половины
-        swapped_image = Image.new('RGB', (width, height))
-        swapped_image.paste(bottom_half, (0, 0))
-        swapped_image.paste(top_half, (0, mid_y))
-    return swapped_image
-image_path = 'D:/ФОТО Redmi 9T/Камера/Flower.jpg'
-print("Введите 0 или 1 в соответствии с нужной вам операцией")
-print("Какие части изображения поменять?")
-n=int(input("0—верхнюю и нижнюю, 1—правую и левую"))
-swapped_image = swap_halves(image_path) # Меняем местами половины изображения
-swapped_image.show()
-'''
