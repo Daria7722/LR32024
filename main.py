@@ -75,7 +75,6 @@ async def make_image(request: Request, n: int = Form(), files: List[UploadFile] 
                         plt.ylabel('Количество пикселей')
                         plt.title('Распределение цветов на изображении')
                         image_1 = plt.savefig("static/image_1.png")
-                        #plt.clf()
                         p_images[i]=swapped_image
                         p_images[i].save("./" + images[i], 'JPEG')
 
