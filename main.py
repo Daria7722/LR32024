@@ -2,9 +2,7 @@ import numpy as np
 import hashlib
 import io
 from typing import List
-
 import matplotlib.pyplot as plt
-import numpy as np
 import uvicorn
 from PIL import Image
 from fastapi import FastAPI, Request, Form
